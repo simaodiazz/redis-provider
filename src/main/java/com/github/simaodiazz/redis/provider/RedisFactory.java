@@ -1,14 +1,13 @@
 package com.github.simaodiazz.redis.provider;
 
 import com.github.simaodiazz.redis.provider.configuration.RedisConfiguration;
-import redis.clients.jedis.JedisPool;
 
 public class RedisFactory {
 
     private static RedisFactory instance;
 
-    public JedisPool build(RedisConfiguration configuration) {
-        return new JedisPool(configuration.getHost(), configuration.getPort(), configuration.getUsername(), configuration.getPassword());
+    public Redis build(RedisConfiguration configuration) {
+        return new Redis(configuration);
     }
 
     public static RedisFactory getInstance() {
