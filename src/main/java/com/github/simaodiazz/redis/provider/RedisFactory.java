@@ -1,5 +1,8 @@
 package com.github.simaodiazz.redis.provider;
 
+import com.github.simaodiazz.redis.provider.configuration.RedisConfiguration;
+import redis.clients.jedis.JedisPool;
+
 public class RedisFactory {
 
     private static RedisFactory instance;
